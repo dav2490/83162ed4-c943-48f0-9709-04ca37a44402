@@ -1,0 +1,25 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["test", "debug"],
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "resolveJsonModule": true,
+    "incremental": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "src"
+  },
+  "watchOptions": {
+    "excludeDirectories": ["node_modules_prod", "**/node_modules", "**/dist"]
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+dist
+docs
+
+tsconfig.tsbuildinfo
+yarn.lock
+.DS_Store
+
+log.log
