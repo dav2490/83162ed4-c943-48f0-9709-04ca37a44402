@@ -24,7 +24,7 @@ const getWeatherForecastHandler: RequestHandler = asyncHandler(
     _response: Response,
     next: NextFunction
   ): Promise<void> => {
-    const cityName = _request.query?.cityName.toString();
+    const cityName = _request.query?.cityName?.toString();
 
     const response = await forecastController.getOpenWeatherMapCurrentForecast(
       cityName
@@ -67,7 +67,7 @@ const getFiveDaysForecastHandler: RequestHandler = asyncHandler(
     _request: Request<{ cityName: string }>,
     _response: Response
   ): Promise<void> => {
-    const cityName = _request.query?.cityName.toString();
+    const cityName = _request.query?.cityName?.toString();
 
     const response = await forecastController.getOpenWeatherMapFiveDaysForecast(
       cityName
